@@ -1,5 +1,9 @@
 import { NavLink } from "react-router-dom";
-import { LayoutDashboard, Briefcase } from "lucide-react";
+import {
+  LayoutDashboard,
+  Briefcase,
+  ArrowLeftRight,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ThemeToggle from "@/components/ThemeToggle";
 
@@ -27,6 +31,18 @@ export default function Sidebar() {
             >
               <Briefcase size={18} />
               Portfolio
+            </Button>
+          )}
+        </NavLink>
+
+        <NavLink to="/trades">
+          {({ isActive }) => (
+            <Button
+              variant={isActive ? "secondary" : "ghost"}
+              className="w-full justify-start gap-3"
+            >
+              <ArrowLeftRight size={18} />
+              Trades
             </Button>
           )}
         </NavLink>
