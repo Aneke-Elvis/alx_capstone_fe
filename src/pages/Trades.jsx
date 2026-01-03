@@ -1,4 +1,5 @@
 import TradesTable from "@/components/trades/TradesTable";
+import TradeForm from "@/components/trades/TradeForm";
 
 export default function Trades() {
   return (
@@ -6,6 +7,7 @@ export default function Trades() {
       <h1 className="text-2xl font-bold">Trades</h1>
 
       <TradesTable />
+       <TradeForm />
     </div>
   );
 }
