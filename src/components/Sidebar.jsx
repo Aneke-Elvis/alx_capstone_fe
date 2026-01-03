@@ -3,10 +3,9 @@ import { LayoutDashboard, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ThemeToggle from "@/components/ThemeToggle";
 
-
 export default function Sidebar() {
   return (
-    <aside className="w-56 border-r bg-background p-4">
+    <aside className="w-64 h-screen border-r bg-background p-4 flex flex-col">
       <nav className="space-y-2">
         <NavLink to="/" end>
           {({ isActive }) => (
@@ -32,7 +31,9 @@ export default function Sidebar() {
           )}
         </NavLink>
       </nav>
-      <div className="mt-auto">
+
+      {/* Push to bottom */}
+      <div className="mt-auto pt-4">
         <ThemeToggle />
       </div>
     </aside>
