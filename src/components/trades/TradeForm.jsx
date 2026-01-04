@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { getAssets, createTrade } from "@/lib/api";
+import { fetchAssets } from "@/lib/assets";
+import { createTrade } from "@/lib/trades";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -13,7 +14,7 @@ export default function TradeForm() {
   });
 
   useEffect(() => {
-    getAssets().then(setAssets).catch(console.error);
+    fetchAssets().then(setAssets).catch(console.error);
   }, []);
 
   function handleChange(e) {

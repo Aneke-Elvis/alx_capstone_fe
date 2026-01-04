@@ -33,8 +33,8 @@ const trades = [
 
 export default function TradesTable() {
   return (
-    <div className="rounded-xl border bg-card">
-      <Table>
+    <div className="rounded-xl border bg-card overflow-x-auto">
+      <Table className="min-w-[700px]">
         <TableHeader>
           <TableRow>
             <TableHead>Symbol</TableHead>

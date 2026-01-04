@@ -21,7 +21,7 @@ export default function PortfolioChart() {
       <h2 className="mb-4 font-semibold">Portfolio Allocation</h2>
 
       <div className="h-[260px]">
-        <ResponsiveContainer width="100%" height="100%">
+        <ResponsiveContainer width="100%" height={300}>
           <PieChart>
             <Pie
               data={data}

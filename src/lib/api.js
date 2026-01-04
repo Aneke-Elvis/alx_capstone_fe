@@ -1,21 +1,10 @@
-const API_BASE = "http://127.0.0.1:8000/api";
+import axios from "axios";
 
-export async function getAssets() {
-  const res = await fetch(`${API_BASE}/trading/assets/`);
-  if (!res.ok) throw new Error("Failed to fetch assets");
-  return res.json();
-}
+const api = axios.create({
+  baseURL: "http://127.0.0.1:8000/api",
+  headers: {
+    "Content-Type": "application/json",
+  },
+});
 
-export async function createTrade(data) {
-  const res = await fetch(`${API_BASE}/trading/trades/`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      // Authorization: `Token ${token}`  ← later
-    },
-    body: JSON.stringify(data),
-  });
-
-  if (!res.ok) throw new Error("Failed to create trade");
-  return res.json();
-}
+export default api;

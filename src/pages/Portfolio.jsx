@@ -16,7 +16,7 @@ export default function Portfolio() {
       </div>
 
       {/* Chart + table */}
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid gap-6 grid-cols-1 lg:grid-cols-2">
         <PortfolioChart />
         <PortfolioTable />
       </div>
